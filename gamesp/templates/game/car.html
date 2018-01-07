@@ -1,0 +1,48 @@
+<!Document html>
+<html>
+  <header>
+    <title> keyboard Control </title>
+  </header>
+
+  <body onkeydown="key_control(event)" >
+    <img id="back" src="http://cfile29.uf.tistory.com/image/99FC02365A4C35BB1737F4" style="display:none">
+    <img id="user" src="http://cfile7.uf.tistory.com/image/990EF13A5A4C362A174153" style="display:none">
+    <img id="me" src="http://cfile5.uf.tistory.com/image/99654B465A4C3644138B46" style="display:none">
+    <canvas id="canvas_control" width="1000" height="500" style="border:10px solid #d3d3d3;"></canvas>
+    <script src="http://daviduino.co.kr/attachment/cfile24.uf@996E083C5A4C35D215EF25.js"></script>
+
+    <script>
+    //  var speed=5;
+    //  var user_x=500-user.width/2;
+  //    var user_y=250-user.height/2;
+      var user_x = 0;
+      var user_y = 0;
+
+      var random_x=[];
+      var random_y=[];
+
+      for(var i=0; i<4; i++)
+      {
+        random_x[i]=Math.random()*1000+1;
+        random_y[i]=Math.random()*500+1;
+      }
+
+      function render()
+      {
+        var canvas_show=canvas_control.getContext("2d");
+        canvas_show.drawImage(back,0,0,1000,500);
+        var index_max=random_x.length;
+        for(var i=0; i<index_max; i++)
+        {
+        canvas_show.drawImage(user,random_x[i],random_y[i],30,60);
+        }
+        canvas_show.drawImage(me,user_x,user_y,30,60);
+        // onmousedown="mouse_down(event)"
+        //canvas_show.drawImage(me,0,0,30,60);
+      }
+      //var time_object = setInterval(render, 50);
+      var time_object = setInterval(render, 50);
+    </script>
+  </body>
+
+</html>

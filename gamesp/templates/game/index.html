@@ -1,0 +1,51 @@
+{% extends 'game/base.html' %}
+
+{% block gamecar %}
+  <style>
+  button {
+      background-color:white
+      border: 2px solid #555555;
+      color: black;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      cursor: pointer;
+    }
+  </style>
+  <a href="gamecar"><button>Car </button></a>
+  <p><h4>javascript_canvas</h4></p>
+{% endblock %}
+
+{% block tensorapp %}
+    <a href="/tensorapp/"><button>덧셈</button></a>
+    <p><h4>python_Tensorflow</h4></p>
+
+{% endblock %}
+
+{% block figure %}
+    <a href="/figure/"><button>그래프(변수1개)</button></a>
+    <p><h4>Matplot_mpld3</h4></p>
+{% endblock %}
+
+{% block graph %}
+    <a href="/graph/"><button>그래프(변수2개)</button></a>
+    <p><h4>Matplot_mpld3</h4></p>
+{% endblock %}
+
+{% block reinforce %}
+    <a href="/reinforce/"><button>강화학습</button></a>
+    <p><h4>to be continued...reinforcement</h4></p>
+{% endblock %}
+
+<!-- {% block etc3 %}
+    <a href="/etc/"><button>etc</button></a>
+{% endblock %}
+-->
+
+{% block board %}
+    <a href="/tesorproj/write/"><button>쓰기</button></a> <a href="/tesorproj/list/"><button>읽기</button></a>
+    <p><h4>계산판 글쓰고, 읽기</h4></p>
+{% endblock %}

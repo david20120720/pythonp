@@ -1,0 +1,110 @@
+
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Django Girls blog</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="C:/0work/tensorproject/game/static/ss/blog.css">
+  <style>
+    /* Remove the navbar's default margin-bottom and rounded borders */
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+    }
+
+    /* Add a gray background color and some padding to the footer */
+    footer {
+      background-color: #f2f2f2;
+      padding: 25px;
+
+    }
+  </style>
+</head>
+<body>
+
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Portfolio</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Gallery</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="jumbotron">
+  <div class="container text-center">
+    <h1>눈으로 보는 인공지능</h1>
+    <p>파이선 인공지능 시각화 구현</p>
+  </div>
+</div>
+
+<div class="container-fluid bg-3 text-center">
+  <h3>Some of my Work</h3><br>
+  <div class="row">
+    <div class="col-sm-2">
+      <h4><p>{% block gamecar %} {% endblock %}</p></h4>
+      <img src="http://cfile24.uf.tistory.com/image/998D973D5A4C8161306B40" class="img-responsive" style="width:150%" alt="Image">
+      <p><h6>방향키로 user car 조작</h6></p>
+    </div>
+
+    <div class="col-sm-2">
+      <h4><p>{% block tensorapp %}{% endblock %}</p></h4>
+      <img src="http://cfile10.uf.tistory.com/image/9929584A5A4F64C3192884" class="img-responsive" style="width:90%" alt="Image">
+    </div>
+
+    <div class="col-sm-2">
+      <h4><p>{% block figure %} {% endblock %}</p></h4>
+      <img src="http://cfile24.uf.tistory.com/image/9938744A5A50756E12F6B2" class="img-responsive" style="width:75%" alt="Image">
+    </div>
+
+    <div class="col-sm-2">
+      <h4><p>{% block graph %} {% endblock %}</p></h4>
+      <img src="http://cfile24.uf.tistory.com/image/9938744A5A50756E12F6B2" class="img-responsive" style="width:75%" alt="Image">
+    </div>
+
+    <div class="col-sm-2">
+      <h4><p>{% block reinforce %} {% endblock %}</p></h4>
+      <img src="http://cfile27.uf.tistory.com/image/99487A375A51E32E1D7442" class="img-responsive" style="width:100%" alt="Image">
+    </div>
+
+<!--    <div class="col-sm-2">
+#      <h4><p>{% block etc3 %} {% endblock %}</p></h4>
+#      <img src="http://cfile24.uf.tistory.com/image/9938744A5A50756E12F6B2" class="img-responsive" style="width:75%" alt="Image">
+    </div>
+-->
+    <div class="col-sm-2.5">
+      <h4><p>{% block board %}{% endblock %}</p></h4>
+      <img src="http://cfile7.uf.tistory.com/image/997FC7375A488F9613E661" class="img-responsive" style="width:16%" alt="Image">
+    </div>
+  </div>
+</div><br>
+
+<footer class="container-fluid text-center">
+  <p>Footer Text</p>
+</footer>
+
+</body>
+
+</html>

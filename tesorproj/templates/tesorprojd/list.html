@@ -1,0 +1,13 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>WRITE</title>
+        
+    </head>
+    <body>
+        <li>제목|저자|날씨</li>
+        {% for article in articleList %}
+        <li><a href="/tesorproj/view/{{article.id}}">{{article.title}}</a> | {{article.name}} | {{article.cdate|date:"D d M Y"}} </li>
+        {% endfor %}        
+    </body>
+</html>
